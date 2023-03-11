@@ -1,0 +1,57 @@
+@tailwind base;
+
+a {
+  @apply text-blue-700;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+.center-all {
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-pri{
+  background-color: #04132A;
+}
+.bg-sec{
+  background-color: #FDFEFA;
+}
+.bg-action{
+  background-color: #C3916B;
+}
+
+.pri{
+  color: #04132A;
+}
+.sec{
+  color: #FDFEFA;
+}
+.action{
+  color: #C3916B;
+}
+.hover{
+  color: #63533B
+}
+
+.kanit {
+  font-family: "Kanit";
+}
+
+.mont {
+  font-family: "Montserrat";
+}
