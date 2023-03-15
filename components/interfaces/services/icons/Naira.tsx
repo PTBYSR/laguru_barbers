@@ -1,6 +1,6 @@
 import React from "react";
 
-const Naira = ({w, h, fill, fill2}) => {
+const Naira = ({ w, h, fill, fill2 }) => {
   return (
     <svg
       width="21"

@@ -12,9 +12,9 @@ a:hover {
 
 @tailwind utilities;
 
-.content p {
+/* .content p {
   @apply my-6;
-}
+} */
 
 .content ul {
   @apply my-6;
@@ -54,4 +54,8 @@ a:hover {
 
 .mont {
   font-family: "Montserrat";
+}
+
+.abril {
+  font-family: "Abril Fatface"
 }

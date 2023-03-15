@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Buzz = ({w, h, fill}) => {
+const Buzz = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Clock = ({w, h, fill}) => {
+const Clock = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

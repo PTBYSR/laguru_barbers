@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Mail = ({w, h, fill}) => {
+const Mail = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

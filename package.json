@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
     "build-prod": "run-s clean build export",
@@ -23,6 +24,9 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "firebase": "^9.17.2",
+    "hamburger-react": "^2.5.0",
+    "lottie-react": "^2.4.0",
     "next": "^13.2.4",
     "next-seo": "^5.15.0",
     "next-sitemap": "^4.0.5",

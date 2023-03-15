@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Location = ({w, h, fill}) => {
+const Location = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

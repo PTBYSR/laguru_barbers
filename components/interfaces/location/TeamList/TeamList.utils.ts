@@ -4,11 +4,11 @@ export const TeamListUtils = () => [
   {
     name: "Sarah Chime",
     position: "Junior Barber",
-    img: team1 
+    img: team1,
   },
   {
     name: "Julio Ibeh",
     position: "Barber",
-    img: team1
+    img: team1,
   },
-]
+];

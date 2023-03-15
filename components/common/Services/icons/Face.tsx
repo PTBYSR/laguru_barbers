@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Face = ({ w, h, fill}) => {
+const Face = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

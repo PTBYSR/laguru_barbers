@@ -1,37 +1,46 @@
-import Image from "next/image";
+import Image from "next/Image";
 import React from "react";
 
-import img from "../../../public/locationcard1.png";
-import Button from "../Button";
+import logo from "../../../public/logo.png";
 import Contact from "../../common/Contact";
 import Services from "../../common/Services";
+// import img from "../../../public/locationcard1.png";
+import Button from "../Button";
 
-const LocationCard = () => {
+const LocationCard = ({ img, title, route, id }) => {
   return (
-    <div className="shadow-md shadow-black bg-pri min-w-[28rem] w-[32rem]  ">
-      <div className=" flex w-full h-[4.4rem]">
-        <div className="w-1/2 flex center-all bg-action">logo</div>
-        <div className="w-1/2  flex center-all bg-sec">
-          <div className="pri kanit text-2xl font-semibold">Gwarimpa</div>
+    <div className="bg-pri  md:w w-full px-2  drop-shadow-2xl   ">
+      <div className=" flex h-[4.4rem] w-full">
+        <div className="center-all bg-action flex w-1/2">
+          <div className="w-10">
+            <div>
+              <Image src={logo} />
+            </div>
+          </div>
+        </div>
+        <div className="center-all  bg-sec flex w-1/2">
+          <div className="pri kanit text-2xl font-semibold">{title}</div>
         </div>
       </div>
       {/* pic */}
-      <div className="overflow-hidden relative h-56 ">
-        <div className="absolute w-[110%]   ">
+      <div className="relative h-56 overflow-hidden ">
+        <div className="w-] absolute  -top-[7rem] ">
           <Image src={img} alt={""} />
         </div>
       </div>
       {/* accordion */}
-      <div variant="w-fit" className="py-7 px-14 flex flex-col gap-7">
+      <div variant="w-fit" className="flex flex-col gap-7 py-11 px-5 md:px-14">
         {/* services */}
         <Services />
         {/* contact */}
         <Contact />
         {/* button */}
-        <div className="w-fit">
-
-        </div>
-        <Button variant="w-fit" children={"shop details"}/>
+        <div className="w-fit"></div>
+        <Button
+          route={`/locations/${id}`}
+          variant="w-fit"
+          children={"shop details"}
+        />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Scissors = ({w, h, fill}) => {
+const Scissors = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

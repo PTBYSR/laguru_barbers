@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Phone = ({w, h, fill}) => {
+const Phone = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

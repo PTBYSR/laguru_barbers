@@ -1,7 +1,7 @@
-import Link from "next/link";
-import type { ReactNode } from "react";
-
-import { AppConfig } from "@/utils/AppConfig";
+import Footer from 'components/layouts/Footer';
+import Nav from 'components/layouts/Nav/Nav';
+import type { ReactNode } from 'react';
+import React from 'react';
 
 type IMainProps = {
   meta: ReactNode;
@@ -12,19 +12,20 @@ const Main = (props: IMainProps) => (
   <div className="">
     {props.meta}
 
-    <div className="">
-        <nav>
-          <div className="h-20 "></div>
-        </nav>
-      <div className="flex h-screen relative">
-        <div className="absolute left-0  bg-sec h-screen w-3"></div>
-        <main className="mx-3 content  text-xl bg-pri flex-grow">{props.children}</main>
-        <div className="absolute right-0  bg-sec h-screen w-3"></div>
+    <div className="bg-pri">
+      <Nav />
+      <div className="relative mt-[4.5rem] flex">
+        <div className="bg-sec fixed left-0 h-screen w-3"></div>
+        <div className="grow">
+          <main className="content bg-pri  mx-3 grow text-xl">
+            {props.children}
+            <div className="bg-sec fixed bottom-0  h-3 w-screen"></div>
+          </main>
+        </div>
+        <div className="bg-sec fixed  right-0 h-screen w-3"></div>
       </div>
 
-      <footer className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{" "}
-      </footer>
+      <Footer />
     </div>
   </div>
 );

@@ -1,1 +1,1 @@
-export {default} from './OpeningHours'
+export { default } from './OpeningHours';

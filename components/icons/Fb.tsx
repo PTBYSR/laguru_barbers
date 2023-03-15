@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Fb = ({w, h, fill}) => {
+const Fb = ({ w, h, fill }) => {
   return (
     <svg
       width={w}

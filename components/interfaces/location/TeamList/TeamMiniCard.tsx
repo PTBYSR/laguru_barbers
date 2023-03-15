@@ -1,41 +1,42 @@
 import Fb from "components/icons/fb";
 import Ig from "components/icons/ig";
+import Image from "next/Image";
 import React from "react";
-import Image from 'next/Image'
 
-
-const TeamMiniCard = ({name, position, img}) => {
+const TeamMiniCard = ({ name, position, img }) => {
   return (
-    <div className="shadow-md shadow-black w-[25rem] h-32 flex relative">
-      <div className="z-[1000] flex absolute ">
-        <div className="cursor-pointer  flex center-all bg-pri hover:bg-[#C3916B] w-8 h-8">
+    <div className="relative flex h-32 w-[25rem] shadow-md shadow-black">
+      <div className="absolute z-[1000] flex ">
+        <div className="center-all  bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B]">
           <Fb fill="white" h="20" w="20" />
         </div>
-        <div className="cursor-pointer hover:bg-[#C3916B] flex center-all bg-pri w-8 h-8 ">
+        <div className="center-all bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B] ">
           <Ig fill="white" h="20" w="20" />
         </div>
       </div>
-      <div className="overflow-hidden w-1/2  relative">
+      <div className="relative w-1/2  overflow-hidden">
         <div className="w-full">
           <Image src={img} />
         </div>
       </div>
-      <div className="w-1/2 flex flex-col">
+      <div className="flex w-1/2 flex-col">
         <div className=" h-1/2">
-          <div className="bg-pri flex center-all flex-col h-full">
-            <div className="kanit sec flex center-all leading-4">John Madu</div>
-            <div className="kanit text-gray-400 text-xs font-light flex center-all">
+          <div className="bg-pri center-all flex h-full flex-col">
+            <div className="kanit sec center-all flex leading-4">John Madu</div>
+            <div className="kanit center-all flex text-xs font-light text-gray-400">
               Senior barber
             </div>
           </div>
         </div>
-        <div className="border h-1/2">
-        <div className=" bg-sec flex center-all flex-col h-full">
-          <div className="text-xs leading-none uppercase font-bold kanit">
-            logo
+        <div className="h-1/2 border">
+          <div className=" bg-sec center-all flex h-full flex-col">
+            <div className="kanit text-xs font-bold uppercase leading-none">
+              logo
+            </div>
+            <div className="kanit text-2xl font-medium text-[#242429] ">
+              Gwarimpa
+            </div>
           </div>
-          <div className="text-[#242429] text-2xl font-medium kanit ">Gwarimpa</div>
-        </div>
         </div>
       </div>
     </div>

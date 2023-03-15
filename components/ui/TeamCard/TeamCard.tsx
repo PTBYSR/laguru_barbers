@@ -1,32 +1,35 @@
 import Fb from "components/icons/fb";
 import Ig from "components/icons/ig";
-import Image from "next/image";
+import Image from "next/Image";
 import React from "react";
+
 import team1 from "../../../public/team1.jpg";
 
 const TeamCard = () => {
   return (
-    <div className="relative  h-[26rem] w-64 ">
-      <div className="flex absolute ">
-        <div className="cursor-pointer  flex center-all bg-pri hover:bg-[#C3916B] w-8 h-8">
+    <div className="relative shadow-sm md:h-[26rem] md:w-64 ">
+      <div className="absolute flex ">
+        <div className="center-all  bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B]">
           <Fb fill="white" h="20" w="20" />
         </div>
-        <div className="cursor-pointer hover:bg-[#C3916B] flex center-all bg-pri w-8 h-8 ">
+        <div className="center-all bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B] ">
           <Ig fill="white" h="20" w="20" />
         </div>
       </div>
-      <div className="absolute bottom-0 w-full h-36">
-        <div className="bg-pri flex center-all flex-col w-full h-16">
-          <div className="kanit sec flex center-all leading-4">John Madu</div>
-          <div className="kanit text-gray-400 text-xs font-light flex center-all">
+      <div className="absolute bottom-0 h-36 w-full">
+        <div className="bg-pri center-all flex h-16 w-full flex-col">
+          <div className="kanit sec center-all flex leading-4">John Madu</div>
+          <div className="kanit center-all flex text-xs font-light text-gray-400">
             Senior barber
           </div>
         </div>
-        <div className=" bg-sec flex center-all h-20 w-full flex-col">
-          <div className="text-xs leading-none uppercase font-bold kanit">
+        <div className=" bg-sec center-all flex h-20 w-full flex-col">
+          <div className="kanit text-xs font-bold uppercase leading-none">
             logo
           </div>
-          <div className="text-[#242429] text-2xl font-medium kanit ">Gwarimpa</div>
+          <div className="kanit text-2xl font-medium text-[#242429] ">
+            Gwarimpa
+          </div>
         </div>
       </div>
       <div>

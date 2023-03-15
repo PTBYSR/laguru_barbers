@@ -1,31 +1,32 @@
-import React from "react";
-import Location from "../../../common/Contact/icons/Location";
-import Mail from "../../../common/Contact/icons/Mail";
-import Phone from "../../../common/Contact/icons//phone";
+import React from 'react';
 
-const ContactMiniCard = () => {
+import Location from '../../../common/Contact/icons/Location';
+import Mail from '../../../common/Contact/icons/Mail';
+import Phone from '../../../common/Contact/icons/Phone';
+
+const ContactMiniCard = ({ title }) => {
   return (
-    <div className="py-7 px-9 bg-sec w-[29rem]">
-      <div className="mb-5 uppercase pri text-xs tracking-widest font-bold">
+    <div className="bg-sec w-[29rem] py-7 px-9">
+      <div className="pri mb-5 text-xs font-bold uppercase tracking-widest">
         contact
       </div>
       <ul className="flex flex-col gap-1">
         <li>
-          <div className="flex gap-3 items-center">
+          <div className="flex items-center gap-3">
             <Phone w="17" h="17" fill="#C3916B" />
             <div className="kanit pri ">030 3030 0000</div>
           </div>
         </li>
         <li>
-          <div className="flex gap-3 items-center">
+          <div className="flex items-center gap-3">
             <Mail w="17" h="17" fill="#C3916B" />
             <div className="kanit pri ">hey@beauty.com</div>
           </div>
         </li>
         <li>
-          <div className="flex gap-3 items-center">
+          <div className="flex items-center gap-3">
             <Location w="17" h="17" fill="#C3916B" />
-            <div className="kanit pri ">Gwarimpa, Abuja</div>
+            <div className="kanit pri ">{`${title}, Abuja`}</div>
           </div>
         </li>
       </ul>

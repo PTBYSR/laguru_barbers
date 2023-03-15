@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const ServiceDetails = ({title, description, icon}) => {
+const ServiceDetails = ({ title, description, icon }) => {
   return (
-    <div >
-      <div className="mb-5 uppercase text-xs text-gray-100 tracking-widest font-extrabold">
+    <div>
+      <div className="mb-5 text-xs font-extrabold uppercase tracking-widest text-gray-100">
         {title}
       </div>
       <div>
-      <div className=' bg-sec text-sm pri kanit flex gap-3 items-center  w-56 py-2 px-4 rounded-sm'>
-      <div>{icon}</div>
-        {description}
-      </div>
+        <div className=" bg-sec pri kanit flex w-56 items-center gap-3  rounded-sm py-2 px-4 text-sm">
+          <div>{icon}</div>
+          {description}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceDetails
+export default ServiceDetails;

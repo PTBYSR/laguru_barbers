@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Tools = ({w, h, fill}) => {
+const Tools = ({ w, h, fill }) => {
   return (
     <svg
       width={w}
