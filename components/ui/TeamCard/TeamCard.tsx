@@ -1,9 +1,9 @@
-import Fb from "components/icons/fb";
-import Ig from "components/icons/ig";
-import Image from "next/Image";
-import React from "react";
+import Fb from 'components/icons/FacebookIcon';
+import Ig from 'components/icons/InstagramIcon';
+import Image from 'next/image';
+import React from 'react';
 
-import team1 from "../../../public/team1.jpg";
+import team1 from '../../../public/team1.jpg';
 
 const TeamCard = () => {
   return (

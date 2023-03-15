@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Link from "next/Link";
+import Link from "next/link";
 import React from "react";
 
 const Button = ({ children, variant, route }) => {

@@ -1,11 +1,11 @@
 import Contact from "components/common/Contact";
 import SectionTitle from "components/ui/SectionTitle";
-import Link from "next/Link";
+import Link from "next/link";
 import React from "react";
 
 import Gallery from "./Gallery/Gallery";
 import Fb from "./icons/Fb";
-import Ig from "./icons/Ig";
+import InstagramIcon from "./icons/InstagramIcon";
 import Tw from "./icons/Tw";
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-2 ">
                 <Link href="">
                   <li className="mont flex items-center gap-2 text-sm text-gray-500">
-                    <Ig fill="#FDFEFA" w="20" />
+                    <InstagramIcon fill="#FDFEFA" w="20" />
                     Instagram
                   </li>
                 </Link>

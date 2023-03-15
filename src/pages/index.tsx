@@ -4,7 +4,7 @@ import LocationCard from "components/ui/LocationCard/LocationCard";
 import { LocationCardUtils } from "components/ui/LocationCard/LocationCard.utils";
 import SectionTitle from "components/ui/SectionTitle";
 import TeamCard from "components/ui/TeamCard";
-import Image from "next/Image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 

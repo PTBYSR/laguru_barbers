@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Fb = ({ w, h, fill }) => {
+const FacebookIcon = ({ w, h, fill }) => {
   return (
     <svg
       width={w}
@@ -17,4 +17,4 @@ const Fb = ({ w, h, fill }) => {
   );
 };
 
-export default Fb;
+export default FacebookIcon;

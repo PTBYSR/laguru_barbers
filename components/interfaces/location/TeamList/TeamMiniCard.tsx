@@ -1,17 +1,17 @@
-import Fb from "components/icons/fb";
-import Ig from "components/icons/ig";
-import Image from "next/Image";
-import React from "react";
+import FacebookIcon from 'components/icons/FacebookIcon';
+import InstagramIcon from 'components/icons/InstagramIcon';
+import Image from 'next/image';
+import React from 'react';
 
 const TeamMiniCard = ({ name, position, img }) => {
   return (
     <div className="relative flex h-32 w-[25rem] shadow-md shadow-black">
       <div className="absolute z-[1000] flex ">
         <div className="center-all  bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B]">
-          <Fb fill="white" h="20" w="20" />
+          <FacebookIcon fill="white" h="20" w="20" />
         </div>
         <div className="center-all bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B] ">
-          <Ig fill="white" h="20" w="20" />
+          <InstagramIcon fill="white" h="20" w="20" />
         </div>
       </div>
       <div className="relative w-1/2  overflow-hidden">
