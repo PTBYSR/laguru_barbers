@@ -24,7 +24,7 @@ const Nav = () => {
           <ul
             className={`${
               isOpen ? "" : "hidden"
-            } bg-sec absolute top-[4.5rem] -right-[3px] flex w-[20rem] flex-col  gap-4 p-5 text-center md:static md:flex md:w-auto md:flex-row md:gap-8 md:p-0 md:text-start`}
+            } bg-sec absolute -right-[20px] flex w-[15rem] flex-col  gap-4 p-5 text- md:static md:flex md:w-auto md:flex-row md:gap-8 md:p-0 md:text-start`}
           >
             <li>
               <Link href="/">
