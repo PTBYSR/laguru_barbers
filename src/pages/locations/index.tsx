@@ -1,4 +1,4 @@
-import Location from "components/interfaces/locations/icon/location";
+import Location from "components/interfaces/locations/icon/Location";
 import LocationCard from "components/ui/LocationCard/LocationCard";
 import { LocationCardUtils } from "components/ui/LocationCard/LocationCard.utils";
 import SectionTitle from "components/ui/SectionTitle";
