@@ -21,11 +21,11 @@ const index = () => {
           </h1>
         </div>
       </header>
-      <div className="flex h-[30rem] pb-24 md:px-12">
+      <div className="flex h-[30rem] px-4 pb-24 md:px-12">
         <div className="w-1/2 ">
           <ServiceList />
         </div>
-        <div className="w-1/2 bg-black">{/* <Image src={serviceImg} /> */}</div>
+        {/* <div className="w-1/2 bg-black"><Image src={serviceImg} /></div> */}
       </div>
     </Main>
   );
