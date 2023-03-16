@@ -29,7 +29,7 @@ const Index = () => {
         <div className="">
           <div className="flex flex-col md:h-[28rem] md:w-full md:flex-row">
             <div className="pt-9 md:w-2/3 md:px-12">
-              <h1 className="kanit sec truncate pl-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
+              <h1 className="kanit sec truncate px-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
                 1# <br />
                 BARBER SHOP <br /> IN ABUJA.
               </h1>
