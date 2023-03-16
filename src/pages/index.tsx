@@ -29,7 +29,7 @@ const Index = () => {
         <div className="">
           <div className="flex flex-col md:h-[28rem] md:w-full md:flex-row">
             <div className="pt-9 md:w-2/3 md:px-12">
-              <h1 className="kanit sec truncate px-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
+              <h1 className="kanit sec pl-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
                 1# <br />
                 BARBER SHOP <br /> IN ABUJA.
               </h1>
@@ -88,7 +88,7 @@ const Index = () => {
         <div className="px-12 pt-28 pb-14 md:pb-24">
           <SectionTitle> Our locations</SectionTitle>
         </div>
-        <div className="center-all flex w-full flex-col gap-8 px-4 md:flex-row md:px-12">
+        <div className="center-all flex w-full flex-col gap-8 px-5 md:flex-row md:px-12">
           {locationImg.map((x) => (
             <LocationCard
               id={x.id}
@@ -103,7 +103,7 @@ const Index = () => {
         <div className="px-12 pt-28 pb-14 md:pb-24">
           <SectionTitle variant="pri"> our team</SectionTitle>
         </div>
-        <div className="center-all flex flex-col gap-10 px-4 md:flex-row md:gap-5">
+        <div className="center-all flex flex-col gap-10 px-5 md:flex-row md:gap-5">
           <TeamCard />
           <TeamCard />
           <TeamCard />

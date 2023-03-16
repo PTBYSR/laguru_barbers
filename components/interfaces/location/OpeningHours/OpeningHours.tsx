@@ -5,7 +5,7 @@ import Week from './DaysCard/Week';
 
 const OpeningHours = () => {
   return (
-    <div className="bg-pri flex w-[20rem] flex-col gap-6">
+    <div className="bg-pri flex w-full md:w-[20rem] flex-col gap-6">
       <SectionTitle>opening hours</SectionTitle>
       <Week />
     </div>

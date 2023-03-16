@@ -24,7 +24,7 @@ const ServiceCard = ({ id }) => {
   // console.log(service[id].title)
   return (
     <div>
-      <div className="bg-pri max-w-[31rem]">
+      <div className="px-5 md:px-12 bg-pri max-w-[31rem]">
         <SectionTitle>{service[id - 1]?.title}</SectionTitle>
         <p className="mont sec  mt-3 max-w-[24rem] text-sm">
           {service[id - 1]?.description ||
@@ -39,7 +39,7 @@ const ServiceCard = ({ id }) => {
           />
         </div>
         <div className="flex flex-col gap-6">
-          <div className="flex gap-6">
+          <div className="flex  md:flex-row flex-col gap-5 md:gap-6">
             <ServiceDetails
               title="Duration"
               description="30 Minutes"

@@ -6,7 +6,7 @@ import Phone from '../../../common/Contact/icons/Phone';
 
 const ContactMiniCard = ({ title }) => {
   return (
-    <div className="bg-sec w-[29rem] py-7 px-9">
+    <div className="bg-sec md:w-[29rem] py-7 px-9">
       <div className="pri mb-5 text-xs font-bold uppercase tracking-widest">
         contact
       </div>

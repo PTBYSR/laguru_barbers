@@ -1,4 +1,4 @@
-import { Slant as Hamburger } from "hamburger-react";
+import { Rotate as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -19,7 +19,7 @@ const Nav = () => {
         </div>
         <div className="relative md:static">
           <div className="md:hidden">
-            <Hamburger toggle={setOpen} toggled={isOpen} color="#04132A" />
+            <Hamburger duration={0.8} toggle={setOpen} toggled={isOpen} color="#04132A" />
           </div>
           <ul
             className={`${

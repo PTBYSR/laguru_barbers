@@ -7,7 +7,7 @@ const ServiceDetails = ({ title, description, icon }) => {
         {title}
       </div>
       <div>
-        <div className=" bg-sec pri kanit flex w-56 items-center gap-3  rounded-sm py-2 px-4 text-sm">
+        <div className=" bg-sec pri kanit flex w-56 items-center gap-3  rounded-sm py-2 px-5 text-sm">
           <div>{icon}</div>
           {description}
         </div>

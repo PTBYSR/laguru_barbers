@@ -5,7 +5,7 @@ import React from 'react';
 
 const TeamMiniCard = ({ name, position, img }) => {
   return (
-    <div className="relative flex h-32 w-[25rem] shadow-md shadow-black">
+    <div className="relative flex h-32 md:w-[25rem] shadow-md shadow-black">
       <div className="absolute z-[1000] flex ">
         <div className="center-all  bg-pri flex h-8 w-8 cursor-pointer hover:bg-[#C3916B]">
           <FacebookIcon fill="white" h="20" w="20" />

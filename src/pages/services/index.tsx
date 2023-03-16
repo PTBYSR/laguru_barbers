@@ -21,7 +21,7 @@ const index = () => {
           </h1>
         </div>
       </header>
-      <div className="flex h-[30rem] px-4 pb-24 md:px-12">
+      <div className="flex h-[30rem] px-5 pb-24 md:px-12">
         <div className="w-1/2 ">
           <ServiceList />
         </div>

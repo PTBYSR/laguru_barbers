@@ -35,7 +35,7 @@ const location = () => {
         </div>
       </header>
 
-      <div className="flex w-full flex-col gap-20 px-4 pb-24 md:px-12">
+      <div className="flex w-full flex-col gap-20 px-5 pb-24 md:px-12">
         <div className="-[30rem] flex w-full flex-col overflow-hidden md:flex-row">
           {/* <div className="w-1/2 m-10">
             <Image src={locationImg} />
@@ -44,7 +44,7 @@ const location = () => {
             <Image src={locationImg2} />
           </div> */}
         </div>
-        <div className="flex  flex-wrap gap-5 md:flex-row md:justify-between">
+        <div className="flex  flex-wrap gap-10 md:gap-5 md:flex-row md:justify-between">
           <OpeningHours />
           <div className="mt-4 w-full md:mt-0 md:w-auto">
             <ServiceList />
