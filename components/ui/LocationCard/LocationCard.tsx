@@ -19,7 +19,7 @@ const LocationCard = ({ img, title, route, id }) => {
           </div>
         </div>
         <div className="center-all  bg-sec flex w-1/2">
-          <div className="pri kanit text-2xl font-semibold">{title}</div>
+          <div className="pri kanit text-2xl font-semibold">{title || "Gwarimpa"}</div>
         </div>
       </div>
       {/* pic */}
