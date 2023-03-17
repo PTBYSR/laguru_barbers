@@ -31,7 +31,7 @@ const Index = () => {
       setLoadVid(true);
     }
     console.log(loadVid);
-  });
+  },[loadVid]);
   console.log(locationImg);
   return (
     <Main
@@ -98,12 +98,12 @@ const Index = () => {
                   autoPlay
                   muted
                 ></video>
-                <Image
+                {/* <Image
                   src={landing2}
                   className={`${
                     !loadVid ? "z-[100] top-0 absolute" : " hidden "
                   }`}
-                />
+                /> */}
                 )
                 {/* <div className="absolute top-0">
 
