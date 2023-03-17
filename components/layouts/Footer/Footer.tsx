@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className=" center-all flex md:w-1/2">
               <div className="mont  pri py-6 text-2xl font-bold text-gray-500 md:py-0 ">
-                @laguru_barbers
+                <Link target="_blank" href="https://www.instagram.com/laguru_barbers/"><div className="">@laguru_barbers</div></Link>
               </div>
             </div>
           </div>
@@ -63,22 +63,22 @@ const Footer = () => {
             <div>
               <div className="sec kanit mb-5 text-lg ">Navigate</div>
               <ul className="flex flex-col gap-2">
-                <Link href="">
+                <Link href="/">
                   <li className="mont  text-sm text-gray-500">Home</li>
                 </Link>
-                <Link href="">
+                <Link href="/locations">
                   <li className="mont  text-sm text-gray-500">Locations</li>
                 </Link>
-                <Link href="">
+                <Link href="/services">
                   <li className="mont  text-sm text-gray-500">Services</li>
                 </Link>
-                <Link href="">
+                <Link href="/contact">
                   <li className="mont  text-sm text-gray-500">Contact</li>
                 </Link>
-                <Link href="">
+                <Link href="/">
                   <li className="mont  text-sm text-gray-500">Terms of Use</li>
                 </Link>
-                <Link href="">
+                <Link href="/">
                   <li className="mont  text-sm text-gray-500">
                     Privacy Policy
                   </li>

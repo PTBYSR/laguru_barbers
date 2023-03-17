@@ -7,7 +7,7 @@ import TeamCard from "components/ui/TeamCard";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Meta } from "@/layouts/Meta";
 import { Main } from "@/templates/Main";
@@ -19,13 +19,42 @@ import landing2 from "../../public/landing2.jpg";
 const Index = () => {
   const [locationImg, setLocationImg] = useState(LocationCardUtils);
   const router = useRouter();
-console.log(locationImg)
+  const elementRef = useRef();
+  const [loadVid, setLoadVid] = useState(false);
+
+  useEffect(() => {
+    const videoElem = elementRef.current;
+    console.log(videoElem);
+
+    console.log(videoElem?.readyState, "what");
+    if (videoElem?.readyState == 4) {
+      setLoadVid(true);
+    }
+    console.log(loadVid);
+  });
+  console.log(locationImg);
   return (
     <Main
       meta={
         <Meta title="Laguru Barbers" description="1# barber shop in Abuja" />
       }
     >
+      {/* <motion.div
+        className="h-screen w-screen border absolute bg-action z-[100000]"
+        transition={{
+          // delay: 0.5,
+          x: { duration: 1 },
+          default: { ease: "linear" },
+        }}
+        initial={{
+          x: 0,
+          // opacity: 0.5
+        }}
+        animate={{
+          x: -1500,
+          opacity: 1,
+        }}
+      ></motion.div> */}
       <header className="">
         <div className="">
           <div className="flex flex-col md:h-[28rem] md:w-full md:flex-row">
@@ -44,9 +73,14 @@ console.log(locationImg)
             </div>
             <div className=" relative  h-[21rem] overflow-hidden bg-white md:h-full md:w-1/3">
               <div className="absolute -top-[4rem] bg-action w-full">
-                {/* <Image src={landing2} /> */}
                 <motion.div
-                  className="md:bg-action bg-pri absolute h-[36rem] w-[32rem] top-0"
+                  className="md:bg-action bg-pri absolute h-[36rem] z-[1000] w-[32rem] top-0"
+                  transition={{
+                    delay: 0.3,
+                    x: { duration: 0.8 },
+                    default: { ease: "linear" },
+                    ease: "easeOut"
+                  }}
                   initial={{
                     x: 0,
                     // opacity: 0.5
@@ -55,14 +89,25 @@ console.log(locationImg)
                     x: -550,
                     opacity: 1,
                   }}
-                  transition={{ ease: "linear", duration: 0.4 }}
+                  // transition={{ ease: "linear", duration: 0.4 }}
                 ></motion.div>
                 <video
+                  ref={elementRef}
                   src="https://firebasestorage.googleapis.com/v0/b/laguru-barbers.appspot.com/o/307267939-599545218302144-8721576684276196404-n_bfJrbGN6.mp4?alt=media&token=40a1578e-01ee-46f0-ba7b-7e3b105cf20c"
                   loop
                   autoPlay
                   muted
                 ></video>
+                <Image
+                  src={landing2}
+                  className={`${
+                    !loadVid ? "z-[100] top-0 absolute" : " hidden "
+                  }`}
+                />
+                )
+                {/* <div className="absolute top-0">
+
+                  </div> */}
               </div>
             </div>
           </div>
@@ -71,6 +116,10 @@ console.log(locationImg)
               <div className="absolute -bottom-[1rem] bg-action">
                 <motion.div
                   className="md:block hidden absolute top-[5rem] -right-[32rem] z-[1000] w-[55rem] h-[48rem] bg-pri"
+                  transition={{
+                    delay: 0.3,
+                    x: { duration: 0.5 },
+                  }}
                   initial={{
                     x: -500,
                     // opacity: 0.5
@@ -79,7 +128,7 @@ console.log(locationImg)
                     x: 500,
                     // opacity: 1
                   }}
-                  transition={{ ease: "easeOut", duration: 0.7 }}
+                  // transition={{ ease: "easeOut", duration: 0.7 }}
                 ></motion.div>
                 <Image src={landing} />
               </div>

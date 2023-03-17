@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-
+import Link from 'next/link'
 import { GalleryUtils } from "./Gallery.utils";
 
 const Gallery = () => {
@@ -37,7 +37,9 @@ const Gallery = () => {
             <button onClick={test}>fdfdff</button> */}
           <div className="group relative cursor-pointer overflow-hidden">
             <div className="duration-3 absolute relative h-32 transition group-hover:scale-125 group-hover:opacity-50 md:h-52  md:w-52">
-              <Image src={x.img} fill style={{ objectFit: "cover" }} />
+              <Link target="_blank" href="https://www.instagram.com/laguru_barbers/">
+                <Image src={x.img} fill style={{ objectFit: "cover" }} />
+              </Link>
             </div>
           </div>
         </>

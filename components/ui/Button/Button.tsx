@@ -4,7 +4,7 @@ import React from "react";
 
 const Button = ({ children, variant, route }) => {
   return (
-    <Link href={route || "/"}>
+    <Link href={route || "/"} style={{textDecoration: "none"}}>
       <button
         className={clsx(
           [
