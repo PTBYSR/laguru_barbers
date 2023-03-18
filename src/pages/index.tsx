@@ -72,7 +72,7 @@ const Index = () => {
               </div>
             </div>
             <div className=" relative  h-[21rem] overflow-hidden bg-white md:h-full md:w-1/3">
-              <div className="absolute -top-[4rem] bg-action w-full">
+              <div className="absolute -top-[4rem] bg-action w-full h-full">
                 <motion.div
                   className="md:bg-action bg-pri absolute h-[36rem] z-[1000] w-[32rem] top-0"
                   transition={{
@@ -97,13 +97,14 @@ const Index = () => {
                   loop
                   autoPlay
                   muted
+                  className="bg-pri h-[50rem]"
                 ></video>
-                <Image
+                {/* <Image
                   src={landing2}
                   className={`${
                     !loadVid ? "z-[100] top-0 absolute" : " hidden "
                   }`}
-                />
+                /> */}
                 {/* <div className="absolute top-0">
 
                   </div> */}
@@ -116,7 +117,7 @@ const Index = () => {
                 <motion.div
                   className="md:block hidden absolute top-[5rem] -right-[32rem] z-[1000] w-[55rem] h-[48rem] bg-pri"
                   transition={{
-                    delay: 0.7,
+                    delay: 1,
                     x: { duration: 0.5 },
                   }}
                   initial={{
