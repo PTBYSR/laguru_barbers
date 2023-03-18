@@ -76,7 +76,7 @@ const Index = () => {
                 <motion.div
                   className="md:bg-action bg-pri absolute h-[36rem] z-[1000] w-[32rem] top-0"
                   transition={{
-                    delay: 0.3,
+                    delay: .9,
                     x: { duration: 0.8 },
                     default: { ease: "linear" },
                     ease: "easeOut"
@@ -98,13 +98,12 @@ const Index = () => {
                   autoPlay
                   muted
                 ></video>
-                {/* <Image
+                <Image
                   src={landing2}
                   className={`${
                     !loadVid ? "z-[100] top-0 absolute" : " hidden "
                   }`}
-                /> */}
-                )
+                />
                 {/* <div className="absolute top-0">
 
                   </div> */}
@@ -117,7 +116,7 @@ const Index = () => {
                 <motion.div
                   className="md:block hidden absolute top-[5rem] -right-[32rem] z-[1000] w-[55rem] h-[48rem] bg-pri"
                   transition={{
-                    delay: 0.3,
+                    delay: 0.7,
                     x: { duration: 0.5 },
                   }}
                   initial={{
