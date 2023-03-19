@@ -17,7 +17,7 @@ const Main = (props: IMainProps) => (
       <div className="relative mt-[4.5rem] flex">
         <div className="bg-sec fixed left-0 h-screen w-3"></div>
         <div className="grow">
-          <main className="content bg-pri  mx-3 grow text-xl">
+          <main className="content relative bg-pri  mx-3 grow text-xl">
             {props.children}
             <div className="bg-sec fixed bottom-0  h-3 w-screen"></div>
           </main>

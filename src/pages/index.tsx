@@ -8,83 +8,111 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Meta } from "@/layouts/Meta";
 import { Main } from "@/templates/Main";
-
 import ebere from "../../public/ebere.jpg";
 import landing from "../../public/landing.jpg";
 import landing2 from "../../public/landing2.jpg";
 
 const Index = () => {
+
+  const [visible, isVisible] = useState(false)
   const [locationImg, setLocationImg] = useState(LocationCardUtils);
   const router = useRouter();
   const elementRef = useRef();
   const [loadVid, setLoadVid] = useState(false);
 
   useEffect(() => {
-    const videoElem = elementRef.current;
-    console.log(videoElem);
+    // const videoElem = elementRef.current;
+    // console.log(videoElem);
 
-    console.log(videoElem?.readyState, "what");
-    if (videoElem?.readyState == 4) {
-      setLoadVid(true);
-    }
-    console.log(loadVid);
-  },[loadVid]);
-  console.log(locationImg);
+    // console.log(videoElem?.readyState, "what");
+    // if (videoElem?.readyState == 4) {
+    //   setLoadVid(true);
+    // }
+    // console.log(loadVid);
+
+  // Check if the page has already loaded
+  if (document.readyState === 'complete') {
+    setLoadVid(true)
+  } else {
+    window.addEventListener('load', () => setLoadVid(true));
+    // Remove the event listener when component unmounts
+    return () => window.removeEventListener('load', () => setLoadVid(true));
+  }
+},[]);
+console.log(loadVid)
   return (
     <Main
       meta={
         <Meta title="Laguru Barbers" description="1# barber shop in Abuja" />
       }
     >
-      {/* <motion.div
-        className="h-screen w-screen border absolute bg-action z-[100000]"
-        transition={{
-          // delay: 0.5,
-          x: { duration: 1 },
-          default: { ease: "linear" },
-        }}
-        initial={{
-          x: 0,
-          // opacity: 0.5
-        }}
-        animate={{
-          x: -1500,
-          opacity: 1,
-        }}
-      ></motion.div> */}
+       {/* <motion.div
+                className="h-full w-1/2 border top-0 absolute bg-action z-[100000]"
+                transition={{
+                  // delay: 0.5,
+                  x: { duration: 1 },
+                  default: { ease: "linear" },
+                }}
+                initial={!loadVid}
+                animate={{
+                  x: 200,
+                  opacity: 1,
+                }}
+              ></motion.div> */}
       <header className="">
         <div className="">
           <div className="flex flex-col md:h-[28rem] md:w-full md:flex-row">
-            <div className="pt-9 md:w-2/3 md:px-12">
-              <h1 className="kanit sec pl-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
-                1# <br />
-                BARBER SHOP <br /> IN ABUJA.
-              </h1>
-              <p className=" mont sec p-4 text-sm font-light md:p-0 md:pt-5 md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus reiciendis nihil debitis corporis impedit?{" "}
-              </p>
-              <div className="abril sec p-4 text-xs font-bold md:p-0 md:pt-3">
-                EST 2015
-              </div>
-            </div>
+            {/* <AnimatePresence>
+              {isVisible && (
+                
+                )}
+                </AnimatePresence>
+                 */}
+              <motion.div 
+              transition={{
+                delay: 0.9,
+                x: { duration: .7 },
+                default: { ease: "linear" },
+              }}
+              initial={{
+                x: 100,
+                opacity: 0
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+              }}
+              className="pt-9 relative md:w-2/3 md:px-12">
+              
+                <h1 className="kanit sec pl-4 text-5xl  font-extrabold leading-[2.6rem] md:p-0  md:text-[5.25rem] md:leading-[4.8rem]">
+                  1# <br />
+                  BARBER SHOP <br /> IN ABUJA.
+                </h1>
+                <p className=" mont sec p-4 text-sm font-light md:p-0 md:pt-5 md:text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus reiciendis nihil debitis corporis impedit?{" "}
+                </p>
+                <div className="abril sec p-4 text-xs font-bold md:p-0 md:pt-3">
+                  EST 2015
+                </div>
+              </motion.div>
             <div className=" relative  h-[21rem] overflow-hidden bg-white md:h-full md:w-1/3">
               <div className="absolute -top-[4rem] bg-action w-full h-full">
                 <motion.div
                   className="md:bg-action bg-pri absolute h-[36rem] z-[1000] w-[32rem] top-0"
                   transition={{
-                    delay: .9,
+                    delay: 0.9,
                     x: { duration: 0.8 },
                     default: { ease: "linear" },
-                    ease: "easeOut"
+                    ease: "easeOut",
                   }}
-                  initial={{
+                  initial={!loadVid ? {
                     x: 0,
                     // opacity: 0.5
-                  }}
+                  } : false}
                   animate={{
                     x: -550,
                     opacity: 1,
@@ -97,14 +125,14 @@ const Index = () => {
                   loop
                   autoPlay
                   muted
-                  className="bg-pri h-[50rem]"
+                  className={!loadVid ? "hidden" : "bg-pri h-[50rem]"}
                 ></video>
                 {/* <Image
                   src={landing2}
                   className={`${
                     !loadVid ? "z-[100] top-0 absolute" : " hidden "
-                  }`}
-                /> */}
+                  }`} */}
+                />
                 {/* <div className="absolute top-0">
 
                   </div> */}
