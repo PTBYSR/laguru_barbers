@@ -92,8 +92,7 @@ console.log(loadVid)
                   BARBER SHOP <br /> IN ABUJA.
                 </h1>
                 <p className=" mont sec p-4 text-sm font-light md:p-0 md:pt-5 md:text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusamus reiciendis nihil debitis corporis impedit?{" "}
+                  The nu{" "}
                 </p>
                 <div className="abril sec p-4 text-xs font-bold md:p-0 md:pt-3">
                   EST 2015
