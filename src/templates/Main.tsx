@@ -1,7 +1,7 @@
-import Footer from "components/layouts/Footer/Footer";
-import TopNav from "components/layouts/Nav/TopNav";
-import type { ReactNode } from "react";
-import React from "react";
+import Footer from 'components/layouts/Footer';
+import Nav from 'components/layouts/Nav/Nav';
+import type { ReactNode } from 'react';
+import React from 'react';
 
 type IMainProps = {
   meta: ReactNode;
@@ -9,15 +9,24 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="bg-red overflow-hidden">
-    <div className="mx-auto w-[90%]  md:w-[80%]">
-      <div className="flex center-all">
-        <TopNav />
+  <div className="">
+    {props.meta}
+
+    <div className="bg-pri">
+      <Nav />
+      <div className="relative mt-[4.5rem] flex">
+        <div className="bg-sec fixed left-0 h-screen w-3"></div>
+        <div className="grow">
+          <main className="content relative bg-pri  mx-3 grow text-xl">
+            {props.children}
+            <div className="bg-sec fixed bottom-0  h-3 w-screen"></div>
+          </main>
+        </div>
+        <div className="bg-sec fixed  right-0 h-screen w-3"></div>
       </div>
-      {props.meta}
-        <main className="">{props.children}</main>
+
+      <Footer />
     </div>
-        <Footer />
   </div>
 );
 

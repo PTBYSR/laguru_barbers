@@ -1,14 +1,22 @@
-import React from 'react'
-import Link from 'next/Link'
-import clsx from 'clsx'
-const Button = ({href, children, className}) => {
-  return (
-    <button className={clsx(className, 'border-2 text-white border-white py-4 uppercase text-sm px-6 rounded-md')}>
-      <Link className='flex center-all gap-4' href={href ? href : ""}>
-        {children}
-        </Link>
-    </button>
-  )
-}
+import clsx from "clsx";
+import Link from "next/link";
+import React from "react";
 
-export default Button
+const Button = ({ children, variant, route }) => {
+  return (
+    <Link href={route || "/"} style={{textDecoration: "none"}}>
+      <button
+        className={clsx(
+          [
+            "sec kanit bg-action cursor-pointer py-3 px-6 text-center text-sm font-bold uppercase shadow-md shadow-black transition duration-200 hover:bg-[#A67B5A] hover:shadow-xl hover:shadow-2xl",
+          ],
+          variant
+        )}
+      >
+        {children}
+      </button>
+    </Link>
+  );
+};
+
+export default Button;
