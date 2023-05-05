@@ -1,11 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @tailwind base;
-
 
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+
+}
+
+
+
+
+body {
+font-family: "Lexend Deca"}
+
+.badge-spin {
+  animation: spin 5s linear infinite;
+
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lexend {
+  font-family: "Lexend Deca"
+}
+
+.instagram-footer-banner {
+  left: calc(50% - 64px)
+}
+.de-border {
+  border: 1px solid black
+}
+.bg-red {
+  background-color: #EF354C;
+}
+
+.bg-yellow {
+  background-color: #FFDC4A;
+}
+
+.white {
+  color: #fff;
+}
 
 /* .content p {
   @apply my-6;
@@ -18,39 +62,4 @@
 .center-all {
   justify-content: center;
   align-items: center;
-}
-
-.bg-pri{
-  background-color: #04132A;
-}
-.bg-sec{
-  background-color: #FDFEFA;
-}
-.bg-action{
-  background-color: #C3916B;
-}
-
-.pri{
-  color: #04132A;
-}
-.sec{
-  color: #FDFEFA;
-}
-.action{
-  color: #C3916B;
-}
-.hover{
-  color: #63533B
-}
-
-.kanit {
-  font-family: "Kanit";
-}
-
-.mont {
-  font-family: "Montserrat";
-}
-
-.abril {
-  font-family: "Abril Fatface"
 }

@@ -1,56 +1,26 @@
-import { Rotate as Hamburger } from "hamburger-react";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-
-import logo from "../../../public/logo.png";
+import React from 'react'
+import {navUtils } from './Nav.utils'
+import { useState } from 'react'
+import NavLink from './NavLink'
 
 const Nav = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [nav, setNav] = useState(navUtils)
+  console.log(nav)
   return (
-    <nav className="">
-      <div className=" bg-sec fixed top-0 z-[10000] flex h-[4.5rem] w-full items-center justify-between px-7 md:px-14">
-        <div className="center-all flex">
-          <div className="w-12">
-            <Link href="/">
-              <Image src={logo} />
-            </Link>
-          </div>
-        </div>
-        <div className="relative md:static">
-          <div className="md:hidden">
-            <Hamburger duration={0.8} toggle={setOpen} toggled={isOpen} color="#04132A" />
-          </div>
-          <ul
-            className={`${
-              isOpen ? "" : "hidden"
-            } bg-sec absolute -right-[20px] flex w-[15rem] flex-col  gap-4 p-5 text- md:static md:flex md:w-auto md:flex-row md:gap-8 md:p-0 md:text-start`}
-          >
-            <li>
-              <Link href="/">
-                <div className="mont pri font-semibold">Home</div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/locations">
-                <div className="mont pri font-semibold">Locations</div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <div className="mont pri font-semibold">Services</div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <div className="mont pri font-semibold">Contact</div>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-};
+    <nav className='w-full mt-4'>
+      {/* <ul className='flex center-all md:justify-between w-full flex-wrap'> */}
+      <ul className='md:flex gap-3 md:center-all grid grid-cols-2 text-center md:justify-between md:gap-4 w-full'>
+        {
+          nav.map((x, index) => (
+            <NavLink label={x.label} href={x.href} />
+          ))
+        }
 
-export default Nav;
+      </ul>
+      
+
+    </nav>
+  )
+}
+
+export default Nav
