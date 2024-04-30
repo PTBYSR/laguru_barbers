@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
+import Footer from '../../components/layouts/Footer/Footer';
 
 const contact = () => {
   return (

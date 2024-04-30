@@ -92,8 +92,7 @@ console.log(loadVid)
                   BARBER SHOP <br /> IN ABUJA.
                 </h1>
                 <p className=" mont sec p-4 text-sm font-light md:p-0 md:pt-5 md:text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusamus reiciendis nihil debitis corporis impedit?{" "}
+                The one place in Abuja to get groomed properly. Welcome to Laguru Barbers.{" "}
                 </p>
                 <div className="abril sec p-4 text-xs font-bold md:p-0 md:pt-3">
                   EST 2015
@@ -208,7 +207,7 @@ console.log(loadVid)
           ))}
         </div>
       </section>
-      <section id="team" className="bg-sec pb-24">
+      {/* <section id="team" className="bg-sec pb-24">
         <div className="px-12 pt-28 pb-14 md:pb-24">
           <SectionTitle variant="pri"> our team</SectionTitle>
         </div>
@@ -216,9 +215,10 @@ console.log(loadVid)
           <TeamCard />
           <TeamCard />
         </div>
-      </section>
+      </section> */}
     </Main>
   );
 };
 
 export default Index;
+
